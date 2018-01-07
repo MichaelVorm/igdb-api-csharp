@@ -17,16 +17,20 @@ namespace IgdbApi.Services
             _apiClient = apiClient;
         }
 
-        public List<Game> GetGameById(int id)
+        public Game GetGameById(int id)
         {
-            var game = _apiClient.GetGameById(id);
+            string requestUri = string.Format("/games/{0}?fields=*", id);
+            var game = _apiClient.Get<Game>(requestUri).Result;
+
             return game;
         }
 
-        public List<Game> SearchGameByName(string name)
+        public List<Game> SearchGamesByName(string name)
         {
-            var game = _apiClient.SearchGameByName(name);
-            return game;
+            string requestUri = string.Format("/games/?search={0}&fields=*", name);
+            var games = _apiClient.Get<List<Game>>(requestUri).Result;
+
+            return games;
         }
     }
 }

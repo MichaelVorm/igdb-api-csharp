@@ -24,18 +24,6 @@ namespace IgdbApi
             _apiClient.DefaultRequestHeaders.Add("Accept", "application/json");
         }
 
-        public List<Game> GetGameById(int id)
-        {
-            string requestUri = string.Format("/games/{0}?fields=*", id);
-            return Get<List<Game>>(requestUri).Result;
-        }
-
-        public List<Game> SearchGameByName(string name)
-        {
-            string requestUri = string.Format("/games/?search={0}&fields=*", name);
-            return Get<List<Game>>(requestUri).Result;
-        }
-
         public async Task<T> Get<T>(string requestUri)
         {
             try

@@ -6,7 +6,6 @@ namespace IgdbApi
 {
     public interface IApiClient
     {
-        List<Game> GetGameById(int id);
-        List<Game> SearchGameByName(string name);
+        Task<T> Get<T>(string requestUri);
     }
 }
