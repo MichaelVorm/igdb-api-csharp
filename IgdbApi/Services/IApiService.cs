@@ -6,7 +6,7 @@ namespace IgdbApi.Services
 {
     public interface IApiService
     {
-        List<Game> GetGameById(int id);
+        Game GetGameById(int id);
         List<Game> SearchGamesByName(string name);
     }
 }

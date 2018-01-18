@@ -23,7 +23,7 @@ namespace IgdbApi.Controllers
         // GET api/<controller>/5
         
         [HttpGet("{id}")]
-        public List<Game> GetGameById(int id)
+        public Game GetGameById(int id)
         {
            var game = _apiClient.GetGameById(id);
 
@@ -35,7 +35,7 @@ namespace IgdbApi.Controllers
         [HttpGet]
         public List<Game> SearchGameByName(string name)
         {
-            var game = _apiClient.SearchGameByName(name);
+            var game = _apiClient.SearchGamesByName(name);
 
             return game;
         }

@@ -32,6 +32,7 @@ namespace IgdbApi
 
                 string stringResult = await response.Content.ReadAsStringAsync();
                 var result = JsonConvert.DeserializeObject<T>(stringResult);
+
                 return result;
             }
             catch (HttpRequestException httpRequestException)

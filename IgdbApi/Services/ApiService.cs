@@ -20,9 +20,9 @@ namespace IgdbApi.Services
         public Game GetGameById(int id)
         {
             string requestUri = string.Format("/games/{0}?fields=*", id);
-            var game = _apiClient.Get<Game>(requestUri).Result;
-
-            return game;
+            var game = _apiClient.Get<List<Game>>(requestUri).Result;
+            
+            return game[0];
         }
 
         public List<Game> SearchGamesByName(string name)
