@@ -12,18 +12,18 @@ namespace IgdbApi.Controllers
     [Route("api/[controller]")]
     public class CharacterController : Controller
     {
-        private IApiService _apiClient { get; }
+        private IApiService _apiService { get; }
 
-        public CharacterController(IApiService apiClient)
+        public CharacterController(IApiService apiService)
         {
-            _apiClient = apiClient;
+            _apiService = apiService;
         }
         // GET api/<controller>/5
 
         [HttpGet("{id}")]
         public Character GetCharacterById(int id)
         {
-            var game = _apiClient.GetCharacterById(id);
+            var game = _apiService.GetCharacterById(id);
 
             return game;
         }
@@ -33,7 +33,7 @@ namespace IgdbApi.Controllers
         [HttpGet]
         public List<Character> SearchCharactersByName(string name)
         {
-            var characters = _apiClient.SearchCharactersByName(name);
+            var characters = _apiService.SearchCharactersByName(name);
 
             return characters;
         }

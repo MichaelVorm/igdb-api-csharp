@@ -33,6 +33,22 @@ namespace IgdbApi.Services
             return game[0];
         }
 
+        public GameCollection GetGameCollectionById(int id)
+        {
+            string requestUri = string.Format("/collections/{0}?fields=*", id);
+            var gameCollection = _apiClient.Get<List<GameCollection>>(requestUri).Result;
+
+            return gameCollection[0];
+        }
+
+        public List<GameCollection> SeachGameCollectionsByName(string name)
+        {
+            string requestUri = string.Format("/collections/?search={0}&fields=*", name);
+            var gameCollections = _apiClient.Get<List<GameCollection>>(requestUri).Result;
+
+            return gameCollections;
+        }
+
         public List<Character> SearchCharactersByName(string name)
         {
             string requestUri = string.Format("/characters/?search={0}&fields=*", name);

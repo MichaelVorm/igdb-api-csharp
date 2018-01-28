@@ -10,5 +10,7 @@ namespace IgdbApi.Services
         List<Game> SearchGamesByName(string name);
         Character GetCharacterById(int id);
         List<Character> SearchCharactersByName(string name);
+        GameCollection GetGameCollectionById(int id);
+        List<GameCollection> SeachGameCollectionsByName(string name);
     }
 }

@@ -12,20 +12,20 @@ using Microsoft.Extensions.Options;
 namespace IgdbApi.Controllers
 {
     [Route("api/[controller]")]
-    public class GameController : Controller
+    public class GameCollectionController : Controller
     {
         private IApiService _apiService { get; }
 
-        public GameController(IApiService apiService)
+        public GameCollectionController(IApiService apiService)
         {
             _apiService = apiService;
         }
         // GET api/<controller>/5
         
         [HttpGet("{id}")]
-        public Game GetGameById(int id)
+        public GameCollection GetGameCollectionById(int id)
         {
-           var game = _apiService.GetGameById(id);
+           var game = _apiService.GetGameCollectionById(id);
 
            return game;
         }
@@ -33,9 +33,9 @@ namespace IgdbApi.Controllers
         // GET api/<controller>/5
         [Route("search/{name}")]
         [HttpGet]
-        public List<Game> SearchGamesByName(string name)
+        public List<GameCollection> SearchGameCollectionsByName(string name)
         {
-            var game = _apiService.SearchGamesByName(name);
+            var game = _apiService.SeachGameCollectionsByName(name);
 
             return game;
         }
