@@ -33,7 +33,7 @@ namespace IgdbApi.Controllers
         // GET api/<controller>/5
         [Route("search/{name}")]
         [HttpGet]
-        public List<Game> SearchGameByName(string name)
+        public List<Game> SearchGamesByName(string name)
         {
             var game = _apiClient.SearchGamesByName(name);
 
