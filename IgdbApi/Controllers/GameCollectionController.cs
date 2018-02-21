@@ -26,9 +26,9 @@ namespace IgdbApi.Controllers
         [HttpGet("{id}")]
         public GameCollection GetGameCollectionById(int id)
         {
-           var game = _gameCollectionService.GetGameCollectionById(id);
+           var gameCollection = _gameCollectionService.GetGameCollectionById(id);
 
-           return game;
+           return gameCollection;
         }
 
         // GET api/<controller>/5
@@ -36,9 +36,9 @@ namespace IgdbApi.Controllers
         [HttpGet]
         public List<GameCollection> SearchGameCollectionsByName(string name)
         {
-            var game = _gameCollectionService.SearchGameCollectionsByName(name);
+            var gameCollections = _gameCollectionService.SearchGameCollectionsByName(name);
 
-            return game;
+            return gameCollections;
         }
     }
 }

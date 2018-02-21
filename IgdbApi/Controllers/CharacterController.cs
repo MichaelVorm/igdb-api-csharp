@@ -24,9 +24,9 @@ namespace IgdbApi.Controllers
         [HttpGet("{id}")]
         public Character GetCharacterById(int id)
         {
-            var game = _characterService.GetCharacterById(id);
+            var character = _characterService.GetCharacterById(id);
 
-            return game;
+            return character;
         }
 
         // GET api/<controller>/5

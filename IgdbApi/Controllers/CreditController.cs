@@ -11,32 +11,32 @@ using IgdbApi.Interfaces;
 namespace IgdbApi.Controllers
 {
     [Route("api/[controller]")]
-    public class CompanyController : Controller
+    public class CreditController : Controller
     {
-        private ICompanyService _companyService { get; }
+        private ICreditService _creditService { get; }
 
-        public CompanyController(ICompanyService companyService)
+        public CreditController(ICreditService creditService)
         {
-            _companyService = companyService;
+            _creditService = creditService;
         }
         // GET api/<controller>/5
 
         [HttpGet("{id}")]
-        public Company GetCompanyById(int id)
+        public Credit GetCreditById(int id)
         {
-            var company = _companyService.GetCompanyById(id);
+            var credit = _creditService.GetCreditById(id);
 
-            return company;
+            return credit;
         }
 
         // GET api/<controller>/5
         [Route("search/{name}")]
         [HttpGet]
-        public List<Company> SearchCompaniesByName(string name)
+        public List<Credit> SearchCreditsByName(string name)
         {
-            var companies = _companyService.SearchCompaniesByName(name);
+            var credits = _creditService.SearchCreditsByName(name);
 
-            return companies;
+            return credits;
         }
     }
 }
