@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using IgdbApi.Dto;
+using IgdbApi.Interfaces;
 using IgdbApi.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
@@ -14,18 +15,18 @@ namespace IgdbApi.Controllers
     [Route("api/[controller]")]
     public class GameController : Controller
     {
-        private IApiService _apiService { get; }
+        private IGameService _gameService { get; }
 
-        public GameController(IApiService apiService)
+        public GameController(IGameService gameService)
         {
-            _apiService = apiService;
+            _gameService = gameService;
         }
         // GET api/<controller>/5
         
         [HttpGet("{id}")]
         public Game GetGameById(int id)
         {
-           var game = _apiService.GetGameById(id);
+           var game = _gameService.GetGameById(id);
 
            return game;
         }
@@ -35,7 +36,7 @@ namespace IgdbApi.Controllers
         [HttpGet]
         public List<Game> SearchGamesByName(string name)
         {
-            var game = _apiService.SearchGamesByName(name);
+            var game = _gameService.SearchGamesByName(name);
 
             return game;
         }

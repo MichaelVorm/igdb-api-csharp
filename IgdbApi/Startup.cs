@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using IgdbApi.Interfaces;
 using IgdbApi.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -33,8 +34,11 @@ namespace IgdbApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddTransient<IApiService, ApiService>();
             services.AddTransient<IApiClient, ApiClient>();
+            services.AddTransient<IGameService, GameService>();
+            services.AddTransient<ICharacterService, CharacterService>();
+            services.AddTransient<ICompanyService, CompanyService>();
+            services.AddTransient<IGameCollectionService, GameCollectionService>();
 
             // Add functionality to inject IOptions<T>
             services.AddOptions();

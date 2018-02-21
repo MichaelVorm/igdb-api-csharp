@@ -11,20 +11,20 @@ using IgdbApi.Interfaces;
 namespace IgdbApi.Controllers
 {
     [Route("api/[controller]")]
-    public class CharacterController : Controller
+    public class CompanyController : Controller
     {
-        private ICharacterService _characterService { get; }
+        private ICompanyService _companyService { get; }
 
-        public CharacterController(ICharacterService characterService)
+        public CompanyController(ICompanyService companyService)
         {
-            _characterService = characterService;
+            _companyService = companyService;
         }
         // GET api/<controller>/5
 
         [HttpGet("{id}")]
-        public Character GetCharacterById(int id)
+        public Company GetCompanyById(int id)
         {
-            var game = _characterService.GetCharacterById(id);
+            var game = _companyService.GetCompanyById(id);
 
             return game;
         }
@@ -32,9 +32,9 @@ namespace IgdbApi.Controllers
         // GET api/<controller>/5
         [Route("search/{name}")]
         [HttpGet]
-        public List<Character> SearchCharactersByName(string name)
+        public List<Company> SearchCompaniesByName(string name)
         {
-            var characters = _characterService.SearchCharactersByName(name);
+            var characters = _companyService.SearchCompaniesByName(name);
 
             return characters;
         }
