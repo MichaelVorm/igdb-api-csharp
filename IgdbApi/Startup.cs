@@ -43,6 +43,7 @@ namespace IgdbApi
             services.AddTransient<IFeedService, FeedService>();
             services.AddTransient<IFranchiseService, FranchiseService>();
             services.AddTransient<IGameEngineService, GameEngineService>();
+            services.AddTransient<IGameModeService, GameModeService>();
 
             // Add functionality to inject IOptions<T>
             services.AddOptions();
