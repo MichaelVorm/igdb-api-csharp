@@ -1,9 +1,6 @@
 ﻿using IgdbApi.Dto;
 using IgdbApi.Interfaces;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace IgdbApi.Services
 {
