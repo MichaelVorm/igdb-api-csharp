@@ -47,6 +47,7 @@ namespace IgdbApi
             services.AddTransient<IGenreService, GenreService>();
             services.AddTransient<IKeywordService, KeywordService>();
             services.AddTransient<IPageService, PageService>();
+            services.AddTransient<IPersonService, PersonService>();
 
             // Add functionality to inject IOptions<T>
             services.AddOptions();
