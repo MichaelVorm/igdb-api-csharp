@@ -46,6 +46,7 @@ namespace IgdbApi
             services.AddTransient<IGameModeService, GameModeService>();
             services.AddTransient<IGenreService, GenreService>();
             services.AddTransient<IKeywordService, KeywordService>();
+            services.AddTransient<IPageService, PageService>();
 
             // Add functionality to inject IOptions<T>
             services.AddOptions();
