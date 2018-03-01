@@ -50,6 +50,7 @@ namespace IgdbApi
             services.AddTransient<IPersonService, PersonService>();
             services.AddTransient<IPlatformService, PlatformService>();
             services.AddTransient<IPlayTimeService, PlayTimeService>();
+            services.AddTransient<IPlayerPerspectiveService, PlayerPerspectiveService>();
 
             // Add functionality to inject IOptions<T>
             services.AddOptions();
