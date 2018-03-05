@@ -56,6 +56,7 @@ namespace IgdbApi
             services.AddTransient<IPulseSourceService, PulseSourceService>();
             services.AddTransient<IReleaseDateService, ReleaseDateService>();
             services.AddTransient<IReviewService, ReviewService>();
+            services.AddTransient<IThemeService, ThemeService>();
 
             // Add functionality to inject IOptions<T>
             services.AddOptions();
