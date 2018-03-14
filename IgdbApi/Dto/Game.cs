@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace IgdbApi.Dto
 {
-    public partial class Game
+    public class Game
     {
         [JsonProperty("id")]
         public long Id { get; set; }
@@ -141,7 +141,7 @@ namespace IgdbApi.Dto
         public External External { get; set; }
     }
 
-    public partial class Website
+    public class Website
     {
         [JsonProperty("category")]
         public long Category { get; set; }
@@ -150,7 +150,7 @@ namespace IgdbApi.Dto
         public string Url { get; set; }
     }
 
-    public partial class Video
+    public class Video
     {
         [JsonProperty("name")]
         public string Name { get; set; }
@@ -159,7 +159,7 @@ namespace IgdbApi.Dto
         public string VideoId { get; set; }
     }
 
-    public partial class TimeToBeat
+    public class TimeToBeat
     {
         [JsonProperty("hastly")]
         public long Hastly { get; set; }
@@ -171,7 +171,7 @@ namespace IgdbApi.Dto
         public long Completely { get; set; }
     }
 
-    public partial class ReleaseDate
+    public class ReleaseDate
     {
         [JsonProperty("category")]
         public long Category { get; set; }
@@ -225,7 +225,7 @@ namespace IgdbApi.Dto
         public long Height { get; set; }
     }
 
-    public partial class AlternativeName
+    public class AlternativeName
     {
         [JsonProperty("name")]
         public string Name { get; set; }

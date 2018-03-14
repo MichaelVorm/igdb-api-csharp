@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace IgdbApi.Dto
 {
-    public partial class PlayerPerspective : Game
+    public class PlayerPerspective : Game
     {
     }
 }

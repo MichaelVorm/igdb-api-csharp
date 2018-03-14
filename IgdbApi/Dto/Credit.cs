@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace IgdbApi.Dto
 {
-    public partial class Credit : Game
+    public class Credit : Game
     {
         [JsonProperty("game")]
         public long Game { get; set; }

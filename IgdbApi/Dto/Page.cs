@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace IgdbApi.Dto
 {
-    public partial class Page : Game
+    public class Page : Game
     {
         [JsonProperty("page_follows_count")]
         public long PageFollowsCount { get; set; }
@@ -24,7 +24,7 @@ namespace IgdbApi.Dto
         public Background Background { get; set; }
     }
 
-    public partial class Background
+    public class Background
     {
         [JsonProperty("url")]
         public string Url { get; set; }

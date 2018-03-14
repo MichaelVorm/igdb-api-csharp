@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace IgdbApi.Dto
 {
-    public partial class Review : Game
+    public class Review : Game
     {
         [JsonProperty("username")]
         public string Username { get; set; }

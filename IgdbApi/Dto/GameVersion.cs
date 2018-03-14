@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace IgdbApi.Dto
 {
-    public partial class GameVersion : Game
+    public class GameVersion : Game
     {
         [JsonProperty("game")]
         public long Game { get; set; }
@@ -15,7 +15,7 @@ namespace IgdbApi.Dto
         public Feature[] Features { get; set; }
     }
 
-    public partial class Feature
+    public class Feature
     {
         [JsonProperty("title")]
         public string Title { get; set; }
@@ -33,7 +33,7 @@ namespace IgdbApi.Dto
         public ValueElement[] Values { get; set; }
     }
 
-    public partial class ValueElement
+    public class ValueElement
     {
         [JsonProperty("game")]
         public long Game { get; set; }

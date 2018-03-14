@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace IgdbApi.Dto
 {
-    public partial class Pulse : Game
+    public class Pulse : Game
     {
         [JsonProperty("title")]
         public string Title { get; set; }
@@ -33,7 +33,7 @@ namespace IgdbApi.Dto
         public PulseImage PulseImage { get; set; }
     }
 
-    public partial class PulseImage
+    public class PulseImage
     {
         [JsonProperty("url")]
         public string Url { get; set; }

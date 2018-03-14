@@ -6,13 +6,13 @@ using Newtonsoft.Json;
 
 namespace IgdbApi.Dto
 {
-    public partial class Platform : Game
+    public class Platform : Game
     {
         [JsonProperty("versions")]
         public Version[] Versions { get; set; }
     }
 
-    public partial class Version
+    public class Version
     {
         [JsonProperty("name")]
         public string Name { get; set; }

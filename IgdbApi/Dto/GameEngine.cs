@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace IgdbApi.Dto
 {
-    public partial class GameEngine : Game
+    public class GameEngine : Game
     {
         [JsonProperty("logo")]
         public Logo Logo { get; set; }
@@ -16,7 +16,7 @@ namespace IgdbApi.Dto
 
     }
 
-    public partial class Logo
+    public class Logo
     {
         [JsonProperty("url")]
         public string Url { get; set; }

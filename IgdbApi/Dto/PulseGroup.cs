@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace IgdbApi.Dto
 {
-    public partial class PulseGroup : Game
+    public class PulseGroup : Game
     {
         [JsonProperty("published_at")]
         public long PublishedAt { get; set; }

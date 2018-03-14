@@ -36,30 +36,6 @@ namespace IgdbApi
             services.AddMvc();
             services.AddTransient<IApiClient, ApiClient>();
             services.AddTransient<IGameService, GameService>();
-            services.AddTransient<ICharacterService, CharacterService>();
-            services.AddTransient<ICompanyService, CompanyService>();
-            services.AddTransient<IGameCollectionService, GameCollectionService>();
-            services.AddTransient<ICreditService, CreditService>();
-            services.AddTransient<IFeedService, FeedService>();
-            services.AddTransient<IFranchiseService, FranchiseService>();
-            services.AddTransient<IGameEngineService, GameEngineService>();
-            services.AddTransient<IGameModeService, GameModeService>();
-            services.AddTransient<IGenreService, GenreService>();
-            services.AddTransient<IKeywordService, KeywordService>();
-            services.AddTransient<IPageService, PageService>();
-            services.AddTransient<IPersonService, PersonService>();
-            services.AddTransient<IPlatformService, PlatformService>();
-            services.AddTransient<IPlayTimeService, PlayTimeService>();
-            services.AddTransient<IPlayerPerspectiveService, PlayerPerspectiveService>();
-            services.AddTransient<IPulseService, PulseService>();
-            services.AddTransient<IPulseGroupService, PulseGroupService>();
-            services.AddTransient<IPulseSourceService, PulseSourceService>();
-            services.AddTransient<IReleaseDateService, ReleaseDateService>();
-            services.AddTransient<IReviewService, ReviewService>();
-            services.AddTransient<IThemeService, ThemeService>();
-            services.AddTransient<ITitleService, TitleService>();
-            services.AddTransient<IUserProfileService, UserProfileService>();
-            services.AddTransient<IGameVersionService, GameVersionService>();
 
             // Add functionality to inject IOptions<T>
             services.AddOptions();

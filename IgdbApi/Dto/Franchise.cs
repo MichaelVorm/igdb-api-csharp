@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace IgdbApi.Dto
 {
-    public partial class Franchise : Game
+    public class Franchise : Game
     {
     }
 }

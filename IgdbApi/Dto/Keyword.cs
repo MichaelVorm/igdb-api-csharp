@@ -6,13 +6,13 @@ using Newtonsoft.Json;
 
 namespace IgdbApi.Dto
 {
-    public partial class Keyword : Game
+    public class Keyword : Game
     {
         [JsonProperty("multiplayer_modes")]
         public MultiplayerMode[] MultiplayerModes { get; set; }
     }
 
-    public partial class MultiplayerMode
+    public class MultiplayerMode
     {
         [JsonProperty("platform")]
         public long Platform { get; set; }
